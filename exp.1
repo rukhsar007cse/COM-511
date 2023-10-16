@@ -1,0 +1,23 @@
+def demonstrate_type_checking(data):
+    # Check type of data
+    print(f'Type of data: {type(data)}')
+
+    if isinstance(data, int):
+        print(f'Absolute value: {abs(data)}')
+    elif isinstance(data, str):
+        print(f'Length of string: {len(data)}')
+        print(f'Is alphanumeric? {data.isalnum()}')
+    elif isinstance(data, list):
+        if data:
+            print(f'Minimum value: {min(data)}')
+    elif isinstance(data, float):
+        print(f'Rounded value: {round(data)}')
+    else:
+        print('Unsupported data type.')
+
+# Test cases
+demonstrate_type_checking(42)  # Integer
+demonstrate_type_checking('Hello')  # String
+demonstrate_type_checking([3, 1, 4, 1, 5, 9])  # List
+demonstrate_type_checking(3.14)  # Float
+demonstrate_type_checking(True)  # Unsupported data type
